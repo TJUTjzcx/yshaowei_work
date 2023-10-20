@@ -1,0 +1,41 @@
+*************************************************************************************
+-----------------
+Git学习记录
+-----------------
+*************************************************************************************
+Git基础命令：
+		1. clone			git上面的克隆到本地
+		2. checkout			本地检出一个分支进行修订
+		3. add				提交前将代码交到暂存区
+		4. commit			提交到本地仓库,加-m可以写注释
+		5. fetch			git上的仓库抓取到本地，不进行修改的那种
+		6. pull				git上远程拉取到本地仓库，自动合并放在工作区，相当于fetch+merge
+		7. push				修改后，需要和团队共享代码时，将代码上传到github上
+		8. git init			创建一个.git的本地仓库
+		9. log				查看日志,--graph（图形化显示）
+		10.reset --hard ID	ID可以用log查询，但是最好不要用
+		11.branch			查看、添加分支 -d（删除分支）-D（强制删除）-vv(查看连接关系)
+		12.chechout			切换分支 -b可以直接创建切换
+		13.merge			合并分支
+		14.status			查看状态
+		15.push				上传github
+		16.diff				查看修改内容
+		   ssh-keygen -t rsa	配置密钥，都直接回车
+		   rm -cache		不跟踪文件
+		   reset HEAD		拉出缓存区
+		   reset head~ --soft 撤销commit
+		
+		创建一个.gitingore的文件，里面说一句*. 关键字	，所有.关键字的文件都不会被add的
+	远程链接方法：
+		git remote add origin github仓库的ssh地址
+		git push --set-upstream origin hub一个分支名	创建链接，下次推直接对应那个分支
+
+在本地创建一个 test-branch 分支，并切换到该分支:
+	git checkout -b 分支名称
+
+查看所有分支：
+	git branch -a
+
+把分支推到远程仓库：（origin这个一般都这么叫，可以自己改的）
+	git push origin 远程分支的名字
+
